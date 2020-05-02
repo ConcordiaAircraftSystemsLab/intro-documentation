@@ -85,4 +85,33 @@ Conda in general is useful for us as, by default, it comes with most of the Pyth
 
 Since Jupyter Lab comes with Anaconda, your installation of Anaconda should have also installed Jupyter Lab on your computer. If for whatever reason it has not, you can follow the installation instructions for Jupyter Lab \href{https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html}{here}. For usage, \href{https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html}{this link} gives a good overview of Jupyter Lab and \href{https://jupyterlab.readthedocs.io/en/stable/user/interface.html}{this link} gives a user guide. \href{https://ipython-books.github.io/36-introducing-jupyterlab/}{This tutorial} is concise and explains how to use Jupyter Lab and notebooks, as well as covering the differences between Jupyter Lab and the Jupyter Notebooks App.
 
+\section{An Example Workflow}
+This section goes through a typical/potential development workflow, starting from creating some code, running that code, creating a GitHub repository and adding your files to it, and sharing that code with others for use and further development.
+
+\subsection{Python File Creation and Editing}
+To start with, decide whether you are starting a new project or writing some miscallaneous short script. If starting a new project, it is best to create a new directory (or folder) for it, but if not you can put your new python file wherever you find convenient. Next, you can create your Python file. One way to do so is to create an empty text file with the \emph{.py} file extension and opening that in VSCode, or starting up VSCode, clicking \lq\lq open folder...\rq\rq, navigating to your chosen folder and either clicking \lq\lq New File\rq\rq or right-clicking in the VSCode file explorer and creating a new file that way. If you created a file and want to open it using VSCode, navigate to the folder that file is in and double click the file name in the VSCode file explorer to have it open up.
+
+At this point, you can start writing some code in the file. You can save with CTRL-S or by clicking File -> Save.
+
+\subsection{Running the Code}
+To run the code, we will use Python in Anaconda. If using Windows, you will want to open Anaconda Prompt, which is a program that you can search for in the Start menu. For Linux or Mac, open a Terminal window and type \lstinline{conda activate}. Once done, navigate to the folder that contains your Python file through the Anaconda Prompt or Terminal window. To navigate to a directory, you can use the \lstinline{cd} command, where you would type a command like \lstinline{cd path/to/folder}. In windows you can type \lstinline{dir} to display a list of all the files in that folder.
+
+Next, to run your Python file, type \lstinline{python filename.py}, where filename.py is the file you want to run. 
+
+\subsection{Creating a GitHub Repository}
+Now that you have some useful code that you want to share of have others contribute to, you may want to add it to GitHub. This is done by creating a GitHub repository. If what you are working on is a tool for the Lab, you will want to create it in the ConcordiaAircraftSystemsLab Organization. If not, you can create it on your personal page.
+
+To create a repository using the GitHub Desktop application, you can follow \href{https://help.github.com/en/desktop/getting-started-with-github-desktop/creating-your-first-repository-using-github-desktop}{these instructions}. You can also create a repository using GitHub through your browser by following\href{https://help.github.com/en/github/getting-started-with-github/create-a-repo}{these instructions}
+
+If you created the repository using GitHub Desktop, you will have already set the top-level folder on your computer that corresponds to that repository, so your Python file (and any other files in that folder) should now be part of that repository (note that you can have files and subdirectories in that folder which do not get put in the repository by creating a \href{https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/}{gitignore file}
+
+If you created the repository using GitHub through the browser, you will have to add your folder to it using \href{https://help.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository}{these instructions}. Note that you will need to re-upload files to the repository every time you want to make a commit, so this can be time-consuming and not the most effective way to work with GitHub. A better way would be to upload your files, then delete them from your computer and use GitHub Desktop to \lq\lq clone\rq\rq the GitHub repository to your computer by following \href{https://help.github.com/en/desktop/contributing-to-projects/cloning-and-forking-repositories-from-github-desktop}{these instructions}.
+
+You can also use the command line (for Windows you will need to install \href{https://gitforwindows.org/}{the Git Bash application}) by following \href{https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line}{these instructions}.
+
+\section{Sharing the GitHub Repository}
+Now you can share the GitHub repository. If it is a public repository, which you would have defined when you created the repository (and you can always convert between private and public in the future), you can send someone the link to the repository and they will be able to access it.
+
+To invite a GitHub user to be able to push commits to your repository, you can add them as a Collaborator by going to the repository page, going to \lq\lq Settings\rq\rq, then \lq\lq Manage access\rq\rq, then \lq\lq invite teams or people\rq\rq.
+
 \end{document}
